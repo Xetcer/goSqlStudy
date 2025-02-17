@@ -13,8 +13,7 @@ func getTables(db *sql.DB) ([]string, error) {
 	query := `
 	SELECT table_name 
 	FROM information_schema.tables 
-	WHERE table_schema='bookings'
-`
+	WHERE table_schema='bookings'`
 
 	rows, err := db.Query(query)
 	if err != nil {
